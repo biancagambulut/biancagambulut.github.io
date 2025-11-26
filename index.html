@@ -149,6 +149,17 @@
       .about-box { flex-direction: column; text-align: center; }
       .about-photo { width:150px;height:150px; }
     }
+    .screenshots {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.screenshots img {
+  width: 22%;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
   </style>
 </head>
 
@@ -193,38 +204,34 @@
     </div>
 
     <!-- PROJECTS -->
-    <div class="section" id="projects">
-      <h2>📈 Projects</h2>
+  <div class="section" id="projects">
+  <h2>📈 Projects</h2>
 
-      <div class="projects-grid">
+  <div class="projects-grid">
 
-        <div class="project-card">
+    <!-- PROJECT CARD -->
+    <div class="project-card">
 
-          <img src="project1.jpg" class="project-img">
+      <h3>Population Aged 0–3 Across Europe</h3>
+      <ul>
+        <li>✔ Power BI Dashboard</li>
+        <li>✔ Data Source: Eurostat</li>
+        <li>✔ DAX & Power Query</li>
+      </ul>
 
-          <h3>Population Aged 0–3 Across Europe</h3>
-
-          <ul>
-            <li>✔ Power BI Dashboard</li>
-            <li>✔ Data Source: Eurostat</li>
-            <li>✔ DAX & Power Query</li>
-          </ul>
-
-          <div class="thumbs">
-            <img src="images/1.png" class="thumb" onclick="openModal(this.src)">
-            <img src="images/2.png" class="thumb" onclick="openModal(this.src)">
-            <img src="images/3.png" class="thumb" onclick="openModal(this.src)">
-            <img src="images/4.png" class="thumb" onclick="openModal(this.src)">
-          </div>
-
-          <a class="btn" href="https://biancagambulut.github.io/PowerBI---Portofolio/" target="_blank">
-            View Full Dashboard
-          </a>
-
-        </div>
+      <div class="screenshots">
+        <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/1.png">
+        <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/2.png">
+        <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/3.png">
+        <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/4.png">
       </div>
+
+      <a class="btn" href="https://biancagambulut.github.io/PowerBI---Portofolio/"
+         target="_blank">View Full Dashboard</a>
     </div>
 
+  </div>
+</div>
     <!-- CONTACT -->
     <div class="section" id="contact">
       <h2>📫 Contact</h2>
