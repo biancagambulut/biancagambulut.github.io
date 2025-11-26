@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Bianca Gambulut - Portfolio</title>
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
   <style>
@@ -17,12 +18,6 @@
       justify-content: center;
       background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
       color: #fff;
-      animation: fadeInPage 1s ease forwards;
-      opacity: 0;
-    }
-
-    @keyframes fadeInPage {
-      to { opacity: 1; }
     }
 
     /* NAVBAR */
@@ -36,15 +31,7 @@
       text-align: center;
       z-index: 1000;
       border-bottom: 1px solid rgba(255,255,255,0.08);
-      animation: slideDown .7s ease forwards;
-      transform: translateY(-40px);
-      opacity: 0;
     }
-
-    @keyframes slideDown {
-      to { transform: translateY(0); opacity:1; }
-    }
-
     .navbar a {
       margin: 0 15px;
       color: #ccccff;
@@ -54,13 +41,13 @@
       transition: 0.3s;
     }
     .navbar a:hover { color: #00e5ff; }
-    .navbar a:hover { color: #00e5ff; transform: scale(1.1); }
 
     /* CONTAINER */
     .container {
       width: 90%;
       max-width: 950px;
       margin-top: 110px;
+      margin-bottom: 60px;
     }
 
     h1 { text-align: center; font-size: 42px; margin-bottom: 4px; }
@@ -73,17 +60,12 @@
       border-radius: 15px;
       border: 1px solid rgba(255,255,255,0.18);
       margin-bottom: 30px;
-      animation: fadeUp .8s forwards;
-      opacity: 0;
-      transform: translateY(40px);
+      backdrop-filter: blur(10px);
     }
 
-    .section:nth-child(2) { animation-delay: .3s; }
-    .section:nth-child(3) { animation-delay: .5s; }
-    .section:nth-child(4) { animation-delay: .7s; }
-
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
+    .section h2 {
+      margin-top: 0;
+      margin-bottom: 12px;
     }
 
     /* ABOUT */
@@ -98,8 +80,10 @@
       height: 200px;
       border-radius: 10px;
       object-fit: cover;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.4);
     }
 
+    /* BUTTON */
     .btn {
       background: #00b4d8;
       padding: 12px 20px;
@@ -108,9 +92,9 @@
       color: #fff;
       font-weight: 500;
       display: inline-block;
-      transition: .3s;
+      transition: 0.3s;
     }
-    .btn:hover { background: #0096c7; transform: scale(1.05); }
+    .btn:hover { background: #0096c7; transform: scale(1.03); }
 
     /* PROJECTS */
     .projects-grid {
@@ -120,65 +104,57 @@
     }
 
     .project-card {
-      background: rgba(255,255,255,0.06);
-      border-radius: 10px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 12px;
       padding: 20px;
-      border: 1px solid rgba(255,255,255,0.18);
-      transition: .3s;
+      border: 1px solid rgba(255,255,255,0.12);
     }
 
-    .project-card:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 15px rgba(0,255,255,.3);
+    .project-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
     }
 
-    /* Thumbnails */
+    .project-card ul {
+      margin-left: 18px;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+
     .screenshots {
       display: flex;
       gap: 10px;
-      margin: 15px 0;
+      margin-bottom: 18px;
+      overflow-x: auto;
+      padding-bottom: 4px;
     }
 
     .screenshots img {
-      width: 22%;
+      height: 120px;
       border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.3);
+      flex-shrink: 0;
+      transition: 0.3s;
       cursor: pointer;
-      transition: .3s;
-      transition: .4s;
     }
 
-    .screenshots img:hover { transform: scale(1.07); }
     .screenshots img:hover {
-      transform: translateY(-6px) scale(1.1);
-      filter: brightness(1.2);
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 0 15px rgba(0,255,255,0.4);
     }
 
-    /* MODAL */
-    #modal {
-      display:none;
-      position:fixed;
-      top:0; left:0;
-      width:100%; height:100%;
-      background:rgba(0,0,0,.8);
-      justify-content:center;
-      align-items:center;
-      z-index:9999;
-    }
-    #modal img {
-      max-width:90%;
-      max-height:90%;
-      border-radius:10px;
-      animation: zoom .3s ease;
-    }
-
-    @keyframes zoom {
-      from { transform: scale(0.5); opacity: 0 }
-      to { transform: scale(1); opacity: 1 }
+    /* CONTACT BUTTONS */
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 15px;
     }
 
     @media(max-width:768px){
       .about-box { flex-direction: column; text-align:center; }
       .about-photo { width:150px;height:150px; }
+      .screenshots { justify-content: center; }
     }
   </style>
 </head>
@@ -200,10 +176,13 @@
   <!-- ABOUT -->
   <div class="section" id="about">
     <div class="about-box">
-      <img src="me.jpg" class="about-photo"/>
+      <img src="me.jpg" class="about-photo" alt="Bianca Gambulut" />
       <div>
         <h2>💁🏻‍♀️ About Me</h2>
-        <p>I specialize in data visualization using Power BI and analytics.</p>
+        <p>
+          I specialize in data visualization, dashboard design and transforming real data
+          into business decisions using Power BI, DAX, data modeling and analytics.
+        </p>
       </div>
     </div>
   </div>
@@ -212,7 +191,7 @@
   <div class="section" id="skills">
     <h2>🧠 Skills</h2>
     <ul>
-      <li>📊 Power BI & DAX</li>
+      <li>📊 Power BI &amp; DAX</li>
       <li>🗂 Data modeling (Star schema)</li>
       <li>🧹 ETL and data cleaning</li>
       <li>🎨 Dashboard UX/UI</li>
@@ -226,37 +205,28 @@
 
     <div class="projects-grid">
 
+      <!-- UN SINGUR PROJECT CARD -->
       <div class="project-card">
         <h3>Population Aged 0–3 Across Europe</h3>
         <ul>
           <li>✔ Power BI Dashboard</li>
           <li>✔ Data Source: Eurostat</li>
-          <li>✔ DAX & Power Query</li>
+          <li>✔ DAX &amp; Power Query</li>
         </ul>
 
+        <!-- thumbnails din repo-ul de proiect -->
         <div class="screenshots">
-          <img src="/PowerBI---Portofolio/images/1.png" onclick="openModal(this.src)">
-          <img src="/PowerBI---Portofolio/images/2.png" onclick="openModal(this.src)">
-          <img src="/PowerBI---Portofolio/images/3.png" onclick="openModal(this.src)">
-          <img src="/PowerBI---Portofolio/images/4.png" onclick="openModal(this.src)">
+          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/1.png" alt="Overview">
+          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/2.png" alt="Country comparison">
+          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/3.png" alt="Trends">
+          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/4.png" alt="Insights">
         </div>
 
         <a class="btn" href="https://biancagambulut.github.io/PowerBI---Portofolio/" target="_blank">
           View Full Dashboard
         </a>
-    <div class="project-card">
-      <h3>Population Aged 0–3 Across Europe</h3>
-
-      <div class="screenshots">
-        <img src="1.png" onclick="openModal(this.src)">
-        <img src="2.png" onclick="openModal(this.src)">
-        <img src="3.png" onclick="openModal(this.src)">
-        <img src="4.png" onclick="openModal(this.src)">
       </div>
 
-      <a class="btn" href="https://biancagambulut.github.io/PowerBI---Portofolio/" target="_blank">
-        View Full Dashboard
-      </a>
     </div>
   </div>
 
@@ -264,27 +234,21 @@
   <div class="section" id="contact">
     <h2>📫 Contact</h2>
     <p>Email: <strong>biancagambulut@gmail.com</strong></p>
-    <a class="btn" href="https://www.linkedin.com/in/alexandra-bianca-gambulut-28b68a253"
-    target="_blank">Visit my LinkedIn</a>
-    <a class="btn" href="https://www.linkedin.com/in/alexandra-bianca-gambulut-28b68a253" target="_blank">Visit my LinkedIn</a>
-    <a href="https://github.com/biancagambulut" target="_blank">🌐 GitHub</a>
+
+    <div class="contact-buttons">
+      <a class="btn" href="https://www.linkedin.com/in/alexandra-bianca-gambulut-28b68a253" target="_blank">
+        Visit my LinkedIn
+      </a>
+      <a class="btn" href="https://github.com/biancagambulut" target="_blank">
+        🌐 GitHub
+      </a>
+    </div>
   </div>
+
 </div>
 
-<!-- MODAL -->
-<div id="modal" onclick="closeModal()">
-  <img id="modalImg">
-</div>
-
-<script>
-  function openModal(src){
-    modalImg.src = src;
-    modal.style.display="flex";
-  }
-  function closeModal(){
-    modal.style.display="none";
-  }
-</script>
+</body>
+</html>
 
 </body>
 </html>
