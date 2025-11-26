@@ -53,6 +53,22 @@
       border: 1px solid #ddd;
       margin: 25px 0;
     }
+    .about-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.about-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+}
 
     .project a {
       display: inline-block;
@@ -85,13 +101,15 @@
   <img src="me.jpg" class="profile">
 </div>
 
-    <div class="section">
-      <h2>👩🏻‍💻 About Me</h2>
-      <p>
-        I specialize in data visualization, dashboard design and transforming real data
-        into business decisions using Power BI, DAX, data modeling and analytics.
-      </p>
-    </div>
+ <div class="section about-box">
+  <img src="me.jpg" class="about-photo">
+
+  <div class="about-text">
+    <h2>💁🏻‍♀️ About Me</h2>
+    <p>I specialize in data visualization, dashboard design and transforming real data
+    into business decisions using Power BI, DAX, data modeling and analytics.</p>
+  </div>
+</div>
 
     <div class="section">
       <h2>🧠 Skills</h2>
