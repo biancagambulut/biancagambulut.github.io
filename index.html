@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <title>Bianca Gambulut - Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: 'Segoe UI', Roboto, Arial;
+      font-family: 'Poppins', sans-serif;
       background: #f2f2f2;
       margin: 0;
       padding: 0;
@@ -25,14 +27,22 @@
       margin-top: 20px;
     }
 
+    .profile {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-top: 20px;
+    }
+
     h1 {
-      font-size: 38px;
-      color: #222;
+      font-size: 40px;
       margin-bottom: 0;
+      color: #222;
     }
 
     h3 {
-      color: #666;
+      color: #555;
       font-weight: normal;
       margin-top: 8px;
     }
@@ -42,7 +52,7 @@
       padding: 25px;
       border-radius: 12px;
       border: 1px solid #ddd;
-      margin: 25px 0;
+      margin: 30px 0;
     }
 
     .about-box {
@@ -54,80 +64,90 @@
     .about-photo {
       width: 180px;
       height: 180px;
-      border-radius: 8px;
       object-fit: cover;
+      border-radius: 8px;
     }
 
     .about-text {
       flex: 1;
     }
 
-    ul {
-      line-height: 1.7;
-    }
-
-    .project a {
+    .btn {
       display: inline-block;
-      margin-top: 10px;
       background: #0056d6;
       color: white;
-      padding: 12px 22px;
+      padding: 10px 20px;
       border-radius: 8px;
       text-decoration: none;
+      transition: 0.2s;
     }
-    
-    .project a:hover {
+
+    .btn:hover {
       background: #003c8a;
     }
+
+    ul { line-height: 1.8; }
   </style>
 </head>
 
 <body>
   <div class="container">
 
+    <!-- HEADER -->
     <div class="header">
       <h1>Bianca Gambulut</h1>
       <h3>Power BI Developer • Data Analyst</h3>
+      <img src="me.jpg" class="profile">
     </div>
 
+    <!-- ABOUT ME -->
     <div class="section about-box">
       <img src="me.jpg" class="about-photo">
+
       <div class="about-text">
         <h2>💁🏻‍♀️ About Me</h2>
-        <p>I specialize in data visualization, dashboard design and transforming real data
-        into business decisions using Power BI, DAX, data modeling and analytics.</p>
+        <p>
+          I specialize in data visualization, dashboard design and transforming real data
+          into business decisions using Power BI, DAX, data modeling and analytics.
+        </p>
       </div>
     </div>
 
+    <!-- SKILLS -->
     <div class="section">
       <h2>🧠 Skills</h2>
       <ul>
         <li>📊 Power BI & DAX</li>
-        <li>🗂 Data modeling (Star schema)</li>
+        <li>🗂 Data modeling (star schema)</li>
         <li>🧹 ETL and data cleaning</li>
         <li>🎨 Dashboard UX/UI</li>
         <li>🧠 SQL (basic)</li>
       </ul>
     </div>
 
-    <div class="section project">
+    <!-- PROJECTS -->
+    <div class="section">
       <h2>📈 Power BI Projects</h2>
+
       <strong>Population Aged 0–3 Across European Countries</strong><br>
-      <a href="https://biancagambulut.github.io/PowerBI---Portofolio/">
+      <a class="btn" href="https://biancagambulut.github.io/PowerBI---Portofolio/" target="_blank">
         View Project
       </a>
     </div>
 
+    <!-- CONTACT -->
     <div class="section">
-      <h2>📫 Contact</h2>
+      <h2>📬 Contact</h2>
+
       <p>Email: <strong>biancagambulut@gmail.com</strong></p>
 
-      <p>
-       <a class="btn" href="https://www.linkedin.com/in/alexandra-bianca-gambulut-28b68a253" target="_blank">
-  🔗 Visit my LinkedIn
-</a>
-        <a href="https://github.com/biancagambulut" target="_blank">🌐 GitHub</a>
-      </p>
+      <a class="btn" href="https://www.linkedin.com/in/alexandra-bianca-gambulut-28b68a253/" target="_blank">
+        Visit my LinkedIn
+      </a>
+
+      <br><br>
+
+      <a href="https://github.com/biancagambulut" target="_blank">🌐 GitHub</a>
     </div>
 
   </div>
