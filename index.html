@@ -8,10 +8,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    *  {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar a {
+    margin: 0 15px;
+    color: #ccccff;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff;
+}
 
     body {
       font-family: 'Poppins', sans-serif;
@@ -22,6 +48,7 @@
       background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
       color: #fff;
     }
+    
 
     .container {
       width: 90%;
@@ -147,6 +174,12 @@
 </head>
 
 <body>
+  <nav class="navbar">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</nav>
   <div class="container">
 
     <h1>Bianca Gambulut</h1>
