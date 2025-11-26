@@ -1,46 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bianca Gambulut - Portfolio">
+  <meta charset="UTF-8" />
+  <title>Bianca Gambulut - Portfolio</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
   <style>
-    *  {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(8px);
-    text-align: center;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.navbar a {
-    margin: 0 15px;
-    color: #ccccff;
-    font-size: 18px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-weight: 500;
-}
-
-.navbar a:hover {
-    color: #00e5ff;
-    text-shadow: 0 0 10px #00e5ff;
-}
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
       margin: 0;
       padding: 0;
       display: flex;
@@ -48,18 +22,51 @@
       background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
       color: #fff;
     }
-    
 
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      text-align: center;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar a {
+      margin: 0 15px;
+      color: #ccccff;
+      font-size: 18px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    .navbar a:hover {
+      color: #00e5ff;
+      text-shadow: 0 0 10px #00e5ff;
+    }
+
+    /* PAGE LAYOUT */
     .container {
       width: 90%;
       max-width: 950px;
-      margin-top: 60px;
+      margin-top: 110px; /* spațiu sub navbar */
       animation: fadeIn 1.2s ease;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h1 {
@@ -77,6 +84,7 @@
       margin-bottom: 35px;
     }
 
+    /* SECTIONS (carduri) */
     .section {
       background: rgba(255, 255, 255, 0.06);
       padding: 28px;
@@ -89,9 +97,10 @@
 
     .section:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
     }
 
+    /* ABOUT */
     .about-box {
       display: flex;
       align-items: center;
@@ -103,7 +112,7 @@
       height: 200px;
       border-radius: 10px;
       object-fit: cover;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
     }
 
     .about-text {
@@ -112,6 +121,7 @@
       color: #e5e5e5;
     }
 
+    /* BUTTONS */
     .btn {
       background: #00b4d8;
       padding: 12px 20px;
@@ -128,6 +138,7 @@
       transform: scale(1.05);
     }
 
+    /* LISTS & LINKS */
     ul {
       line-height: 1.9;
       font-size: 16px;
@@ -143,7 +154,7 @@
       color: #89d8ff;
     }
 
-    /* Contact alignment */
+    /* CONTACT */
     .contact-links {
       margin-top: 20px;
     }
@@ -154,7 +165,7 @@
       font-size: 16px;
     }
 
-    /* Mobile responsive */
+    /* RESPONSIVE */
     @media (max-width: 768px) {
       .about-box {
         flex-direction: column;
@@ -174,34 +185,36 @@
 </head>
 
 <body>
+  <!-- NAVBAR -->
   <nav class="navbar">
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
-  <div class="container">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+  <div class="container">
     <h1>Bianca Gambulut</h1>
     <h3>Power BI Developer • Data Analyst</h3>
 
     <!-- ABOUT -->
-    <div class="section about-box">
-
-      <img src="me.jpg" class="about-photo">
+    <div class="section about-box" id="about">
+      <img src="me.jpg" alt="Bianca Gambulut" class="about-photo" />
 
       <div class="about-text">
         <h2>💁🏻‍♀️ About Me</h2>
-        <p>I specialize in data visualization, dashboard design and transforming
-        real data into business decisions using Power BI, DAX, data modeling and analytics.</p>
+        <p>
+          I specialize in data visualization, dashboard design and transforming real data
+          into business decisions using Power BI, DAX, data modeling and analytics.
+        </p>
       </div>
     </div>
 
     <!-- SKILLS -->
-    <div class="section">
+    <div class="section" id="skills">
       <h2>🧠 Skills</h2>
       <ul>
-        <li>📊 Power BI & DAX</li>
+        <li>📊 Power BI &amp; DAX</li>
         <li>🗂 Data modeling (Star schema)</li>
         <li>🧹 ETL and data cleaning</li>
         <li>🎨 Dashboard UX/UI</li>
@@ -210,26 +223,33 @@
     </div>
 
     <!-- PROJECTS -->
-    <div class="section">
+    <div class="section" id="projects">
       <h2>📈 Power BI Project</h2>
       <p><strong>Population Aged 0–3 Across European Countries</strong></p>
-      <a href="https://biancagambulut.github.io/PowerBI---Portofolio/" class="btn" target="_blank">View Project</a>
+      <a
+        href="https://biancagambulut.github.io/PowerBI---Portofolio/"
+        class="btn"
+        target="_blank"
+        >View Project</a
+      >
     </div>
 
     <!-- CONTACT -->
-    <div class="section">
+    <div class="section" id="contact">
       <h2>📫 Contact</h2>
       <p>Email: <strong>biancagambulut@gmail.com</strong></p>
 
       <div class="contact-links">
-        <a class="btn" 
-           href="https://www.linkedin.com/in/alexandra-bianca-gambulut-28b68a253" 
-           target="_blank">Visit my LinkedIn</a>
+        <a
+          class="btn"
+          href="https://www.linkedin.com/in/alexandra-bianca-gambulut-28b68a253"
+          target="_blank"
+          >Visit my LinkedIn</a
+        >
 
         <a href="https://github.com/biancagambulut" target="_blank">🌐 GitHub</a>
       </div>
     </div>
-
   </div>
 </body>
 </html>
