@@ -9,6 +9,20 @@
 
   <style>
     * { box-sizing: border-box; scroll-behavior: smooth; }
+    <div id="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(src) {
+  document.getElementById("modal").style.display = "block";
+  document.getElementById("modalImg").src = src;
+}
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+</script>
 
     body {
       font-family: "Poppins", sans-serif;
@@ -160,6 +174,36 @@
   border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.15);
 }
+    /* Full screen image viewer */
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(3px);
+}
+
+#modal img {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+#modal.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 46px;
+  color: white;
+  cursor: pointer;
+}
   </style>
 </head>
 
@@ -219,13 +263,12 @@
         <li>✔ DAX & Power Query</li>
       </ul>
 
-      <div class="screenshots">
-        <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/1.png">
-        <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/2.png">
-        <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/3.png">
-        <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/4.png">
-      </div>
-
+    <div class="screenshots">
+  <img src="images/1.png" onclick="openModal(this.src)">
+  <img src="images/2.png" onclick="openModal(this.src)">
+  <img src="images/3.png" onclick="openModal(this.src)">
+  <img src="images/4.png" onclick="openModal(this.src)">
+</div>
       <a class="btn" href="https://biancagambulut.github.io/PowerBI---Portofolio/"
          target="_blank">View Full Dashboard</a>
     </div>
