@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Bianca Gambulut - Portfolio</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
   <style>
@@ -26,7 +25,7 @@
       top: 0;
       width: 100%;
       padding: 15px 0;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0,0,0,0.6);
       backdrop-filter: blur(8px);
       text-align: center;
       z-index: 1000;
@@ -42,7 +41,6 @@
     }
     .navbar a:hover { color: #00e5ff; }
 
-    /* CONTAINER */
     .container {
       width: 90%;
       max-width: 950px;
@@ -50,8 +48,8 @@
       margin-bottom: 60px;
     }
 
-    h1 { text-align: center; font-size: 42px; margin-bottom: 4px; }
-    h3 { text-align: center; font-size: 18px; color: #ccc; }
+    h1 { text-align:center;font-size:42px;margin-bottom:4px; }
+    h3 { text-align:center;font-size:18px;color:#ccc; }
 
     /* SECTIONS */
     .section {
@@ -63,10 +61,7 @@
       backdrop-filter: blur(10px);
     }
 
-    .section h2 {
-      margin-top: 0;
-      margin-bottom: 12px;
-    }
+    .section h2 { margin-top: 0;margin-bottom:12px; }
 
     /* ABOUT */
     .about-box {
@@ -76,85 +71,79 @@
     }
 
     .about-photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+      width:200px;
+      height:200px;
+      border-radius:10px;
+      object-fit:cover;
+      box-shadow:0 6px 14px rgba(0,0,0,0.4);
     }
 
-    /* BUTTON */
     .btn {
-      background: #00b4d8;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: 500;
-      display: inline-block;
-      transition: 0.3s;
+      background:#00b4d8;
+      padding:12px 20px;
+      border-radius:8px;
+      text-decoration:none;
+      color:#fff;
+      font-weight:500;
+      display:inline-block;
+      transition:0.3s;
     }
-    .btn:hover { background: #0096c7; transform: scale(1.03); }
+    .btn:hover { background:#0096c7;transform:scale(1.03); }
 
-    /* PROJECTS */
+    /* PROJECT */
     .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 25px;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:25px;
     }
 
     .project-card {
-      background: rgba(255,255,255,0.04);
-      border-radius: 12px;
-      padding: 20px;
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-
-    .project-card ul {
-      margin-left: 18px;
-      margin-bottom: 18px;
-      line-height: 1.7;
+      background:rgba(255,255,255,0.04);
+      border-radius:12px;
+      padding:20px;
+      border:1px solid rgba(255,255,255,0.12);
     }
 
     .screenshots {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 18px;
-      overflow-x: auto;
-      padding-bottom: 4px;
+      display:flex;
+      gap:10px;
+      margin-bottom:18px;
+      overflow-x:auto;
+      padding-bottom:4px;
     }
 
     .screenshots img {
-      height: 120px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.3);
-      flex-shrink: 0;
-      transition: 0.3s;
-      cursor: pointer;
+      height:120px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.3);
+      flex-shrink:0;
+      transition:0.3s;
+      cursor:pointer;
     }
-
     .screenshots img:hover {
-      transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 0 15px rgba(0,255,255,0.4);
+      transform:translateY(-4px) scale(1.03);
+      box-shadow:0 0 15px rgba(0,255,255,0.4);
     }
 
-    /* CONTACT BUTTONS */
     .contact-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 15px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:15px;
+    }
+
+    /* MY JOURNEY */
+    .journey {
+      line-height:1.7;
+      font-size:16px;
+      color:#e8e8e8;
     }
 
     @media(max-width:768px){
-      .about-box { flex-direction: column; text-align:center; }
-      .about-photo { width:150px;height:150px; }
-      .screenshots { justify-content: center; }
+      .about-box {flex-direction:column;text-align:center;}
+      .about-photo {width:150px;height:150px;}
+      .screenshots {justify-content:center;}
+      h1 {font-size:32px;}
     }
   </style>
 </head>
@@ -163,8 +152,7 @@
 
 <nav class="navbar">
   <a href="#about">About</a>
-  <a href="#journey">Journey</a>
-  <a href="#why">Why Analytics</a>
+  <a href="#journey">My Journey</a>
   <a href="#skills">Skills</a>
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
@@ -178,7 +166,7 @@
   <!-- ABOUT -->
   <div class="section" id="about">
     <div class="about-box">
-      <img src="me.jpg" class="about-photo" alt="Bianca Gambulut" />
+      <img src="me.jpg" class="about-photo" alt="Bianca" />
       <div>
         <h2>💁🏻‍♀️ About Me</h2>
         <p>
@@ -188,21 +176,15 @@
     </div>
   </div>
 
-  <!-- JOURNEY -->
+  <!-- WHY DATA ANALYST -->
   <div class="section" id="journey">
-    <h2>🚀 My Journey</h2>
-    <p>
+    <h2>🌱 Why Data Analytics</h2>
+    <p class="journey">
       I started my journey as a Civil Engineer, where I developed a strong analytical mindset, attention to detail and problem-solving abilities. Working in architecture helped me understand how systems, structure and technical decisions impact real-world outcomes.
       <br><br>
-      While working with data inside engineering projects, I discovered that analytics is the part I enjoy the most. This inspired my transition into Data Analytics and Power BI development – a field where analytical thinking, design and business decisions meet.
-    </p>
-  </div>
-
-  <!-- WHY ANALYTICS -->
-  <div class="section" id="why">
-    <h2>💡 Why Data Analytics?</h2>
-    <p>
-      Because data turns uncertainty into clarity. Analytics allows me to combine engineering logic, business thinking and data storytelling to build insights that solve real problems and support better decisions.
+      While working with data inside engineering projects, I discovered that analytics is the part I enjoy the most: transforming raw information into clarity, visual insights and better decisions.
+      <br><br>
+      This inspired my transition into Data Analytics and Power BI development – a field where analytical thinking, design and business decisions meet. My goal is to combine my technical background with data storytelling to build meaningful dashboards that solve real problems.
     </p>
   </div>
 
@@ -210,7 +192,7 @@
   <div class="section" id="skills">
     <h2>🧠 Skills</h2>
     <ul>
-      <li>📊 Power BI &amp; DAX</li>
+      <li>📊 Power BI & DAX</li>
       <li>🗂 Data modeling (Star schema)</li>
       <li>🧹 ETL and data cleaning</li>
       <li>🎨 Dashboard UX/UI</li>
@@ -223,43 +205,32 @@
     <h2>📈 Projects</h2>
 
     <div class="projects-grid">
-
-      <!-- PROJECT CARD -->
       <div class="project-card">
         <h3>Population Aged 0–3 Across Europe</h3>
-        <ul>
-          <li>✔ Power BI Dashboard</li>
-          <li>✔ Data Source: Eurostat</li>
-          <li>✔ DAX &amp; Power Query</li>
-        </ul>
 
         <div class="screenshots">
-          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/1.png" alt="Overview">
-          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/2.png" alt="Country comparison">
-          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/3.png" alt="Trends">
-          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/4.png" alt="Insights">
+          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/1.png">
+          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/2.png">
+          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/3.png">
+          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/4.png">
         </div>
 
         <a class="btn" href="https://biancagambulut.github.io/PowerBI---Portofolio/" target="_blank">
-          View Full Dashboard
+          View Full Project
         </a>
       </div>
-
     </div>
   </div>
 
-  <!-- CONTACT -->
   <div class="section" id="contact">
     <h2>📫 Contact</h2>
     <p>Email: <strong>biancagambulut@gmail.com</strong></p>
 
     <div class="contact-buttons">
       <a class="btn" href="https://www.linkedin.com/in/alexandra-bianca-gambulut-28b68a253" target="_blank">
-        Visit my LinkedIn
+        LinkedIn
       </a>
-      <a class="btn" href="https://github.com/biancagambulut" target="_blank">
-        🌐 GitHub
-      </a>
+      <a class="btn" href="https://github.com/biancagambulut" target="_blank">GitHub</a>
     </div>
   </div>
 
