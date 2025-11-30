@@ -94,30 +94,28 @@
       border-radius:12px;
       padding:20px;
       border:1px solid rgba(255,255,255,0.12);
+      text-align: center;
     }
 
     .screenshots {
       display:flex;
-      gap:10px;
+      gap:12px;
       margin-bottom:18px;
-      overflow-x:auto;
       justify-content:center;
-      padding-bottom:4px;
+      flex-wrap:wrap;
     }
 
     .screenshots img {
       height:120px;
+      width:auto;
       border-radius:8px;
       border:1px solid rgba(255,255,255,0.3);
       transition:0.3s;
       cursor:pointer;
-      object-fit:cover;
     }
-
-    /* FIX perfect pt proiect 2 */
-    .projects-grid .project-card:nth-child(2) .screenshots img {
-      height:120px;
-      width:220px;
+    .screenshots img:hover {
+      transform:translateY(-4px) scale(1.03);
+      box-shadow:0 0 15px rgba(0,255,255,0.4);
     }
 
     .contact-buttons {
