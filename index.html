@@ -112,9 +112,10 @@
       transition:0.3s;
       cursor:pointer;
     }
-    .screenshots img:hover {
-      transform:translateY(-4px) scale(1.03);
-      box-shadow:0 0 15px rgba(0,255,255,0.4);
+
+    /* micșorează DOAR imaginile din al doilea proiect */
+    .project-card:nth-child(2) .screenshots img {
+      height:100px;
     }
 
     .contact-buttons {
@@ -217,22 +218,25 @@
         </a>
       </div>
 
-<!-- Project 2 -->
-<div class="project-card">
-  <h3>EU Trade Analysis</h3>
+      <!-- PROJECT 2 -->
+      <div class="project-card">
+        <h3>EU Trade Analysis</h3>
 
-  <div class="screenshots">
-    <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/1.png">
-    <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/2.png">
-    <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/3.png">
-    <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/4.png">
-    <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/5.png">
+        <div class="screenshots">
+          <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/1.png">
+          <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/2.png">
+          <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/3.png">
+          <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/4.png">
+          <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/5.png">
+        </div>
+
+        <a class="btn" href="https://biancagambulut.github.io/World-Trade-Imports-Exports-Analysis/" target="_blank">
+          View Full Project
+        </a>
+      </div>
+
+    </div>
   </div>
-
-  <a class="btn" href="https://biancagambulut.github.io/World-Trade-Imports-Exports-Analysis/" target="_blank">
-    View Full Project
-  </a>
-</div>
 
   <!-- CONTACT -->
   <div class="section" id="contact">
@@ -251,5 +255,4 @@
 
 </body>
 </html>
-</body>
-</html>
+
