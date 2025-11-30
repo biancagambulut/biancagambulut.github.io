@@ -90,41 +90,6 @@
     }
     .btn:hover { background:#0096c7;transform:scale(1.03); }
 
-    /* PROJECT */
-    .projects-grid {
-      display:grid;
-      grid-template-columns:1fr;
-      gap:25px;
-    }
-
-    .project-card {
-      background:rgba(255,255,255,0.04);
-      border-radius:12px;
-      padding:20px;
-      border:1px solid rgba(255,255,255,0.12);
-    }
-
-    .screenshots {
-      display:flex;
-      gap:10px;
-      margin-bottom:18px;
-      overflow-x:auto;
-      padding-bottom:4px;
-    }
-
-    .screenshots img {
-      height:120px;
-      border-radius:8px;
-      border:1px solid rgba(255,255,255,0.3);
-      flex-shrink:0;
-      transition:0.3s;
-      cursor:pointer;
-    }
-    .screenshots img:hover {
-      transform:translateY(-4px) scale(1.03);
-      box-shadow:0 0 15px rgba(0,255,255,0.4);
-    }
-
     .contact-buttons {
       display:flex;
       flex-wrap:wrap;
@@ -132,17 +97,9 @@
       margin-top:15px;
     }
 
-    /* MY JOURNEY */
-    .journey {
-      line-height:1.7;
-      font-size:16px;
-      color:#e8e8e8;
-    }
-
     @media(max-width:768px){
       .about-box {flex-direction:column;text-align:center;}
       .about-photo {width:150px;height:150px;}
-      .screenshots {justify-content:center;}
       h1 {font-size:32px;}
     }
   </style>
@@ -179,10 +136,8 @@
   <!-- WHY DATA ANALYTICS -->
   <div class="section" id="journey">
     <h2>🌱 Why Data Analytics</h2>
-    <p class="journey">
-      I started my journey as a Civil Engineer, where I developed a strong analytical mindset, attention to detail and problem-solving abilities.
-      <br><br>
-      While working with data inside engineering projects, I discovered that analytics is the part I enjoy the most.
+    <p>
+      I discovered that transforming raw information into clarity, visual insights and better decisions is what I enjoy the most.
     </p>
   </div>
   
@@ -202,16 +157,62 @@
   <div class="section" id="projects">
     <h2>📈 Projects</h2>
 
+    <style>
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-top: 25px;
+      }
+
+      .project-card {
+        background: rgba(255,255,255,0.06);
+        border-radius: 14px;
+        padding: 22px;
+        border: 1px solid rgba(255,255,255,0.15);
+        transition: 0.4s;
+        box-shadow: 0 0 0 transparent;
+      }
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.35);
+        border: 1px solid rgba(0,255,255,0.4);
+      }
+
+      .screenshots {
+        display:flex;
+        gap:10px;
+        margin-bottom:18px;
+        overflow-x:auto;
+        padding-bottom:4px;
+      }
+      .screenshots img {
+        height:140px;
+        border-radius:10px;
+        border:1px solid rgba(255,255,255,0.3);
+        flex-shrink:0;
+      }
+
+      .project-card h3 {
+        text-align:center;
+        font-size:21px;
+        font-weight:600;
+        margin-bottom:18px;
+      }
+
+      .btn { width:100%; text-align:center; }
+    </style>
+
     <div class="projects-grid">
-      
+
       <!-- PROJECT 1 -->
       <div class="project-card">
         <h3>Population Aged 0–3 Across Europe</h3>
         <div class="screenshots">
-          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/1.png">
-          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/2.png">
-          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/3.png">
-          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/4.png">
+          <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/1.png">
+          <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/2.png">
+          <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/3.png">
+          <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/4.png">
         </div>
         <a class="btn" href="project1.html" target="_blank">View Full Project</a>
       </div>
@@ -227,23 +228,24 @@
         </div>
         <a class="btn" href="project2.html" target="_blank">View Full Project</a>
       </div>
-
     </div>
   </div>
 
+  <!-- CONTACT -->
   <div class="section" id="contact">
     <h2>📫 Contact</h2>
     <p>Email: <strong>biancagambulut@gmail.com</strong></p>
 
     <div class="contact-buttons">
-      <a class="btn" href="https://www.linkedin.com/in/alexandra-bianca-gambulut-28b68a253" target="_blank">
-        LinkedIn
-      </a>
+      <a class="btn" href="https://www.linkedin.com/in/alexandra-bianca-gambulut-28b68a253" target="_blank">LinkedIn</a>
       <a class="btn" href="https://github.com/biancagambulut" target="_blank">GitHub</a>
     </div>
   </div>
 
 </div>
+
+</body>
+</html>
 
 </body>
 </html>
