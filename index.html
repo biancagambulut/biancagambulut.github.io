@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Bianca Gambulut - Portfolio</title>
+  <title>Bianca Gâmbuluț - Portfolio</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 
@@ -14,56 +14,57 @@
       margin: 0;
       padding: 0;
       display: flex;
-      justify-content: center;
-      background: radial-gradient(circle at top, #1a1b46, #08091c);
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
       color: #fff;
     }
 
+    /* NAVBAR */
     .navbar {
       position: fixed;
       top: 0;
       width: 100%;
       padding: 15px 0;
-      background: rgba(10,10,25,0.7);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
       text-align: center;
       z-index: 1000;
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-
     .navbar a {
       margin: 0 15px;
-      color: #c7ceff;
+      color: #ccccff;
       font-size: 18px;
       text-decoration: none;
       font-weight: 500;
-      transition: .25s;
+      transition: 0.3s;
     }
+    .navbar a:hover { color: #00e5ff; }
 
-    .navbar a:hover { color: #56e4ff; }
 
     .container {
       width: 90%;
-      max-width: 1020px;
-      margin-top: 110px;
-      margin-bottom: 60px;
+      max-width: 950px;
+      margin: 110px auto 60px auto;
+      text-align: center;
     }
 
+    h1 { font-size:42px;margin-bottom:4px; }
+    h3 { font-size:18px;color:#ccc; }
+
+    /* SECTIONS */
     .section {
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.06);
       padding: 28px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,0.18);
       margin-bottom: 30px;
-      backdrop-filter: blur(14px);
-      transition: .4s;
+      backdrop-filter: blur(10px);
+      text-align: left;
     }
 
-    .section:hover {
-      transform:translateY(-3px);
-      box-shadow:0 0 25px rgba(0,255,255,0.15);
-    }
+    .section h2 { margin-top: 0;margin-bottom:12px; }
 
     .about-box {
       display: flex;
@@ -79,38 +80,18 @@
       box-shadow:0 6px 14px rgba(0,0,0,0.4);
     }
 
-    .btn {
-      background: linear-gradient(135deg, #00aaff, #0072ff);
-      padding:14px 20px;
-      border-radius:10px;
-      text-decoration:none;
-      color:#fff;
-      font-weight:600;
-      display:block;
-      text-align:center;
-      transition:.3s;
-    }
-    .btn:hover { transform:scale(1.06); }
-
     .projects-grid {
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap:28px;
-      margin-top:25px;
+      grid-template-columns:1fr;
+      gap:25px;
     }
 
     .project-card {
-      background:rgba(255,255,255,0.07);
-      border-radius:16px;
-      padding:22px;
-      border:1px solid rgba(255,255,255,0.18);
-      transition:.4s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow:0 0 40px rgba(0,255,255,0.4);
-      border:1px solid rgba(0,255,255,0.4);
+      background:rgba(255,255,255,0.04);
+      border-radius:12px;
+      padding:20px;
+      border:1px solid rgba(255,255,255,0.12);
+      text-align:center;
     }
 
     .screenshots {
@@ -122,25 +103,44 @@
     }
 
     .screenshots img {
-      height:140px;
-      border-radius:10px;
+      height:120px;
+      border-radius:8px;
       border:1px solid rgba(255,255,255,0.3);
       flex-shrink:0;
+      transition:0.3s;
+      cursor:pointer;
     }
 
-    footer {
-      text-align:center;
-      padding:15px;
-      color:#bbb;
-      margin-top:40px;
-      font-size:14px;
-      opacity:0.75;
+    .screenshots img:hover {
+      transform:translateY(-4px) scale(1.03);
+      box-shadow:0 0 15px rgba(0,255,255,0.4);
+    }
+
+    .btn {
+      background:#00b4d8;
+      padding:12px 20px;
+      border-radius:8px;
+      text-decoration:none;
+      color:#fff;
+      font-weight:500;
+      display:inline-block;
+      transition:0.3s;
+    }
+    .btn:hover { background:#0096c7;transform:scale(1.03); }
+
+    .contact-buttons {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:15px;
     }
 
     @media(max-width:768px){
       .about-box {flex-direction:column;text-align:center;}
       .about-photo {width:150px;height:150px;}
+      .screenshots {justify-content:center;}
       h1 {font-size:32px;}
+      .section {text-align:center;}
     }
   </style>
 </head>
@@ -164,7 +164,7 @@
   <!-- ABOUT -->
   <div class="section" id="about">
     <div class="about-box">
-      <img src="me.jpg" class="about-photo" />
+      <img src="me.jpg" class="about-photo" alt="Bianca" />
       <div>
         <h2>💁🏻‍♀️ About Me</h2>
         <p>
@@ -186,7 +186,7 @@
     </p>
   </div>
 
-  <!-- JOURNEY -->
+  <!-- MY JOURNEY -->
   <div class="section" id="journey">
     <h2>🚀 My Journey</h2>
     <p>
@@ -215,34 +215,23 @@
     <h2>📈 Projects</h2>
 
     <div class="projects-grid">
-
-      <!-- PROJECT 1 -->
       <div class="project-card">
         <h3>Population Aged 0–3 Across Europe</h3>
-        <div class="screenshots">
-          <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/1.png">
-          <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/2.png">
-          <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/3.png">
-          <img src="https://raw.githubusercontent.com/biancagambulut/PowerBI---Portofolio/main/images/4.png">
-        </div>
-        <a class="btn" href="project1.html" target="_blank">View Full Project</a>
-      </div>
 
-      <!-- PROJECT 2 -->
-      <div class="project-card">
-        <h3>World Trade Imports and Exports Analysis</h3>
         <div class="screenshots">
-          <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/1.png">
-          <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/2.png">
-          <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/3.png">
-          <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/4.png">
+          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/1.png">
+          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/2.png">
+          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/3.png">
+          <img src="https://biancagambulut.github.io/PowerBI---Portofolio/images/4.png">
         </div>
-        <a class="btn" href="project2.html" target="_blank">View Full Project</a>
+
+        <a class="btn" href="https://biancagambulut.github.io/PowerBI---Portofolio/" target="_blank">
+          View Full Project
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- CONTACT -->
   <div class="section" id="contact">
     <h2>📫 Contact</h2>
     <p>Email: <strong>biancagambulut@gmail.com</strong></p>
@@ -254,8 +243,6 @@
   </div>
 
 </div>
-
-<footer>Designed & Built by Bianca Gâmbuluț • 2025</footer>
 
 </body>
 </html>
