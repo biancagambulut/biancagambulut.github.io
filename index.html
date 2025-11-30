@@ -19,7 +19,6 @@
       color: #fff;
     }
 
-    /* NAVBAR */
     .navbar {
       position: fixed;
       top: 0;
@@ -39,8 +38,9 @@
       font-size: 18px;
       text-decoration: none;
       font-weight: 500;
-      transition: 0.25s;
+      transition: .25s;
     }
+
     .navbar a:hover { color: #56e4ff; }
 
     .container {
@@ -50,19 +50,19 @@
       margin-bottom: 60px;
     }
 
-    /* GLASS SECTIONS */
     .section {
-      background: rgba(255,255,255,0.09);
+      background: rgba(255,255,255,0.08);
       padding: 28px;
       border-radius: 18px;
       border: 1px solid rgba(255,255,255,0.15);
       margin-bottom: 30px;
       backdrop-filter: blur(14px);
-      transition: 0.4s;
+      transition: .4s;
     }
+
     .section:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 25px rgba(0,255,255,0.15);
+      transform:translateY(-3px);
+      box-shadow:0 0 25px rgba(0,255,255,0.15);
     }
 
     .about-box {
@@ -86,36 +86,31 @@
       text-decoration:none;
       color:#fff;
       font-weight:600;
-      display:inline-block;
-      width:100%;
+      display:block;
       text-align:center;
-      transition:0.3s;
+      transition:.3s;
     }
     .btn:hover { transform:scale(1.06); }
 
-    h1 { text-align:center;font-size:42px;margin-bottom:4px;font-weight:600; }
-    h3 { text-align:center;font-size:18px;color:#ccc; }
-    h2 { font-size:24px;font-weight:600; }
-
-    /* PROJECTS */
     .projects-grid {
-      display: grid;
+      display:grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 30px;
-      margin-top: 25px;
+      gap:28px;
+      margin-top:25px;
     }
 
     .project-card {
-      background: rgba(255,255,255,0.07);
-      border-radius: 16px;
-      padding: 22px;
-      border: 1px solid rgba(255,255,255,0.18);
-      transition: 0.4s;
+      background:rgba(255,255,255,0.07);
+      border-radius:16px;
+      padding:22px;
+      border:1px solid rgba(255,255,255,0.18);
+      transition:.4s;
     }
+
     .project-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 0 40px rgba(0,255,255,0.4);
-      border: 1px solid rgba(0,255,255,0.4);
+      box-shadow:0 0 40px rgba(0,255,255,0.4);
+      border:1px solid rgba(0,255,255,0.4);
     }
 
     .screenshots {
@@ -125,18 +120,12 @@
       overflow-x:auto;
       padding-bottom:4px;
     }
+
     .screenshots img {
       height:140px;
       border-radius:10px;
       border:1px solid rgba(255,255,255,0.3);
       flex-shrink:0;
-    }
-
-    .contact-buttons {
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top:15px;
     }
 
     footer {
@@ -175,7 +164,7 @@
   <!-- ABOUT -->
   <div class="section" id="about">
     <div class="about-box">
-      <img src="me.jpg" class="about-photo" alt="Profile photo" />
+      <img src="me.jpg" class="about-photo" />
       <div>
         <h2>💁🏻‍♀️ About Me</h2>
         <p>
@@ -185,28 +174,27 @@
     </div>
   </div>
 
-  <!-- WHY -->
+  <!-- WHY DATA ANALYTICS -->
   <div class="section" id="why">
     <h2>🌱 Why Data Analytics</h2>
     <p>
-      I started my journey as a Civil Engineer, where I developed a strong analytical mindset,
-      attention to detail and problem-solving abilities.
+      I started my journey as a Civil Engineer, where I developed a strong analytical mindset, attention to detail and problem-solving abilities. Working in architecture helped me understand how systems, structure and technical decisions impact real-world outcomes.
       <br><br>
-      While working with data inside engineering projects, I discovered that analytics is
-      the part I enjoy the most: transforming raw information into clarity, visual insights
-      and better decisions.
+      While working with data inside engineering projects, I discovered that analytics is the part I enjoy the most: transforming raw information into clarity, visual insights and better decisions.
       <br><br>
-      This inspired my transition into Data Analytics and Power BI development.
+      This inspired my transition into Data Analytics and Power BI development – a field where analytical thinking, design and business decisions meet. My goal is to combine my technical background with data storytelling to build meaningful dashboards that solve real problems.
     </p>
   </div>
 
-  <!-- MY JOURNEY -->
+  <!-- JOURNEY -->
   <div class="section" id="journey">
     <h2>🚀 My Journey</h2>
     <p>
-      I learned how data influences real-world decisions and drives insights. Later, I realized
-      that dashboard development and storytelling with data are the areas I connect with the most.
-      Today, I focus on building dashboards that support understanding and action.
+      I started my journey as a Civil Engineer, where I developed analytical thinking, attention to detail and strong problem-solving skills. Working in architecture helped me understand how systems, structure and technical decisions impact real-world outcomes.
+      <br><br>
+      While working with data inside engineering projects, I discovered that analytics is the part I enjoy the most: transforming raw information into clarity, visual insights and better decisions.
+      <br><br>
+      This inspired my transition into Data Analytics and Power BI development – a field where analytical thinking, design and business decisions meet.
     </p>
   </div>
 
@@ -242,7 +230,7 @@
 
       <!-- PROJECT 2 -->
       <div class="project-card">
-        <h3>EU Trade Analysis Dashboard</h3>
+        <h3>World Trade Imports and Exports Analysis</h3>
         <div class="screenshots">
           <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/1.png">
           <img src="https://raw.githubusercontent.com/biancagambulut/World-Trade-Imports-Exports-Analysis/main/Assets/2.png">
@@ -251,7 +239,6 @@
         </div>
         <a class="btn" href="project2.html" target="_blank">View Full Project</a>
       </div>
-
     </div>
   </div>
 
